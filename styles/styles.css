@@ -211,6 +211,9 @@ body {
     -moz-transform: perspective(70em) rotateY(40deg);
     -o-transform: perspective(70em) rotateY(40deg);
     -ms-transform: perspective(70em) rotateY(40deg);
+
+    transform-style: preserve-3d;
+
 }
 
 .slide.hoverable.right {
@@ -219,6 +222,9 @@ body {
     -moz-transform: perspective(70em) rotateY(-40deg);
     -o-transform: perspective(70em) rotateY(-40deg);
     -ms-transform: perspective(70em) rotateY(-40deg);
+
+    transform-style: preserve-3d;
+
 }
 
 .prev-slide {
