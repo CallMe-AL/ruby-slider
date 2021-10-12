@@ -132,7 +132,8 @@ body {
     height: 100%;
     position: relative;
 
-    perspective: 70em;
+    transform: translateZ(70em);
+    transform-style: preserve-3d
 }
 
 .slide {
