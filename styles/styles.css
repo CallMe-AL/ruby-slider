@@ -205,14 +205,26 @@ body {
 
 .slide.hoverable.left {
     transform: perspective(70em) rotateY(40deg);
+    -webkit-transform: perspective(70em) rotateY(40deg);
+    -moz-transform: perspective(70em) rotateY(40deg);
+    -o-transform: perspective(70em) rotateY(40deg);
+    -ms-transform: perspective(70em) rotateY(40deg);
 }
 
 .slide.hoverable.right {
     transform: perspective(70em) rotateY(-40deg);
+    -webkit-transform: perspective(70em) rotateY(-40deg);
+    -moz-transform: perspective(70em) rotateY(-40deg);
+    -o-transform: perspective(70em) rotateY(-40deg);
+    -ms-transform: perspective(70em) rotateY(-40deg);
 }
 
 .prev-slide {
     transform: perspective(70em) rotateY(40deg) translateX(-105%);
+    -webkit-transform: perspective(70em) rotateY(40deg) translateX(-105%);
+    -moz-transform: perspective(70em) rotateY(40deg) translateX(-105%);
+    -o-transform: perspective(70em) rotateY(40deg) translateX(-105%);
+    -ms-transform:perspective(70em) rotateY(40deg) translateX(-105%);
     scale: 0.5;
     display: block;
 }
@@ -236,6 +248,10 @@ body {
 
 .next-slide {
     transform: perspective(70em) rotateY(-40deg) translateX(105%);
+    -webkit-transform: perspective(70em) rotateY(-40deg) translateX(105%);
+    -moz-transform: perspective(70em) rotateY(-40deg) translateX(105%);
+    -o-transform: perspective(70em) rotateY(-40deg) translateX(105%);
+    -ms-transform:perspective(70em) rotateY(-40deg) translateX(105%);
     scale: 0.5;
     display: block;
 }
@@ -321,7 +337,7 @@ body {
     background: transparent;
     position: absolute;
     cursor: pointer;
-    z-index: 99;
+    z-index: 2;
 }
 
 .btn-left {
