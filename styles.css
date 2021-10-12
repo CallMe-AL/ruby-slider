@@ -78,7 +78,7 @@ body {
     margin: 10px auto;
     margin-top: 20px;
 
-    display: none;
+    /* display: none; */
 }
 
 .hover-btn:hover {
@@ -97,7 +97,7 @@ body {
     color: #9b111e;
     font-size: 1.2rem;
 
-    display: none;
+    /* display: none; */
 }
 
 @media screen and (min-width: 400px) {
