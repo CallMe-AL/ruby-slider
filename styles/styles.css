@@ -251,14 +251,14 @@ body {
 }
 
 .next-slide {
-    transform: perspective(70em) rotateY(-40deg) translateX(105%) translateZ(80em);
+    transform: perspective(70em) rotateY(-40deg) translateX(105%);
     -webkit-transform: perspective(70em) rotateY(-40deg) translateX(105%);
     -moz-transform: perspective(70em) rotateY(-40deg) translateX(105%);
     -o-transform: perspective(70em) rotateY(-40deg) translateX(105%);
     -ms-transform:perspective(70em) rotateY(-40deg) translateX(105%);
     scale: 0.5;
     display: block;
-    
+
     transform-style: preserve-3d;
 }
 
