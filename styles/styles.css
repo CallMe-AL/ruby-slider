@@ -131,11 +131,9 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-}
 
-.mobile-wrap {
-    transform: translate3d(0px, 0px, 0px);
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translateZ(80em);
+    transform-style: preserve-3d;
 }
 
 .slide {
@@ -186,7 +184,6 @@ body {
 .slide.active {
     display: block;
     z-index: 2;
-    transform: translate3d(0,0,0);
 }
 
 @keyframes fadeIn {
