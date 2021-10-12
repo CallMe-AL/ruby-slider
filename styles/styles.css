@@ -182,7 +182,7 @@ body {
 
 .slide.active {
     display: block;
-    z-index: 2;
+    z-index: 999;
 
     /* transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0); */
@@ -231,12 +231,11 @@ body {
 }
 
 .prev-slide {
-    transform: rotateY(40deg) translateX(-105%) ;
+    transform: rotateY(40deg) scale(0.6) translateX(-105%) ;
     /* -webkit-transform: perspective(70em) rotateY(40deg) translateX(-105%);
     -moz-transform: perspective(70em) rotateY(40deg) translateX(-105%);
     -o-transform: perspective(70em) rotateY(40deg) translateX(-105%);
     -ms-transform:perspective(70em) rotateY(40deg) translateX(-105%); */
-    scale: 0.5;
     display: block;
 
     z-index: 1;
@@ -262,12 +261,11 @@ body {
 }
 
 .next-slide {
-    transform: rotateY(-40deg) translateX(105%);
+    transform: rotateY(-40deg) scale(0.6) translateX(105%);
     /* -webkit-transform: perspective(70em) rotateY(-40deg) translateX(105%);
     -moz-transform: perspective(70em) rotateY(-40deg) translateX(105%);
     -o-transform: perspective(70em) rotateY(-40deg) translateX(105%);
     -ms-transform:perspective(70em) rotateY(-40deg) translateX(105%); */
-    scale: 0.5;
     display: block;
 
     transform-style: preserve-3d;
