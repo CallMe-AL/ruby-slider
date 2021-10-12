@@ -233,7 +233,6 @@ body {
     -ms-transform:perspective(70em) rotateY(40deg) translateX(-105%);
     scale: 0.5;
     display: block;
-    transform: translate3d(0,0,0);
 
 }
 
@@ -262,7 +261,6 @@ body {
     -ms-transform:perspective(70em) rotateY(-40deg) translateX(105%);
     scale: 0.5;
     display: block;
-    transform: translate3d(0,0,0);
 
 }
 
