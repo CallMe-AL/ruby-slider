@@ -209,33 +209,34 @@ body {
   }
 
 .slide.hoverable.left {
+    -webkit-transform: rotateY(40deg);
+    -moz-transform: rotateY(40deg);
+    -o-transform: rotateY(40deg);
+    -ms-transform: rotateY(40deg);
     transform: rotateY(40deg);
-    /* -webkit-transform: perspective(70em) rotateY(40deg);
-    -moz-transform: perspective(70em) rotateY(40deg);
-    -o-transform: perspective(70em) rotateY(40deg);
-    -ms-transform: perspective(70em) rotateY(40deg); */
 
     transform-style: preserve-3d;
 
 }
 
 .slide.hoverable.right {
+    -webkit-transform: rotateY(-40deg);
+    -moz-transform: rotateY(-40deg);
+    -o-transform: rotateY(-40deg);
+    -ms-transform: rotateY(-40deg);
     transform: rotateY(-40deg);
-    /* -webkit-transform: perspective(70em) rotateY(-40deg);
-    -moz-transform: perspective(70em) rotateY(-40deg);
-    -o-transform: perspective(70em) rotateY(-40deg);
-    -ms-transform: perspective(70em) rotateY(-40deg); */
 
     transform-style: preserve-3d;
 
 }
 
 .prev-slide {
-    transform: rotateY(40deg) scale(0.6) translateX(-105%);
     -webkit-transform: rotateY(40deg) scale(0.6) translateX(-105%);
     -moz-transform: rotateY(40deg) scale(0.6) translateX(-105%);
     -o-transform: rotateY(40deg) scale(0.6) translateX(-105%);
     -ms-transform:rotateY(40deg) scale(0.6) translateX(-105%);
+    transform: rotateY(40deg) scale(0.6) translateX(-105%);
+
     display: block;
 
     z-index: 1;
@@ -261,11 +262,12 @@ body {
 }
 
 .next-slide {
-    transform: rotateY(-40deg) scale(0.6) translateX(105%);
     -webkit-transform: rotateY(-40deg) scale(0.6) translateX(105%);
     -moz-transform: rotateY(-40deg) scale(0.6) translateX(105%);
     -o-transform: rotateY(-40deg) scale(0.6) translateX(105%);
     -ms-transform:rotateY(-40deg) scale(0.6) translateX(105%);
+    transform: rotateY(-40deg) scale(0.6) translateX(105%);
+
     display: block;
 
     transform-style: preserve-3d;
