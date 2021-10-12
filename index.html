@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    
+    <div class="carousel">
+        <h1 class="header">A slider for Ruby</h1>
+        <button class="hover-btn" type="button">Toggle hover effect</button>
+        <p class="toggle-text">Hover is: <span class="on-off">on</span></p>
+        <div class="carousel-container">
+            <div class="track-container">
+                <div class="slide active hoverable">
+                    <img class="slide-img" src="images/ruby1.JPG" alt="">
+                    <p class="img-text active-text">Ruby and her toy</p>
+                </div>
+                <div class="slide next-slide">
+                    <img class="slide-img" src="images/ruby2.JPG" alt="">
+                    <p class="img-text">Snoozin' Ruby</p>
+                </div>
+                <div class="slide">
+                    <img class="slide-img" src="images/ruby3.JPG" alt="">
+                    <p class="img-text">Begging</p>
+                </div>
+                <div class="slide">
+                    <img class="slide-img" src="images/ruby4.JPG" alt="">
+                    <p class="img-text">Lookin' at the cameraperson</p>
+                </div>
+                <div class="slide">
+                    <img class="slide-img" src="images/ruby5.JPG" alt="">
+                    <p class="img-text">Ruby in the lilacs</p>
+                </div>
+                <div class="slide prev-slide">
+                    <img class="slide-img" src="images/ruby6.JPG" alt="">
+                    <p class="img-text">Ruby stoically in the car</p>
+                </div>            
+            </div>
+            <button class="btn-left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="btn-right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+        </div>
+
+    </div>
+
+    <script src="script/app.js"></script>
+</body>
+</html>
