@@ -262,7 +262,7 @@ body {
 
 .next-slide {
     transform: rotateY(-40deg) scale(0.6) translateX(105%);
-    -webkit-transform: perspective(70em) rotateY(-40deg) translateX(105%);
+    -webkit-transform: rotateY(-40deg) scale(0.6) translateX(105%);
     -moz-transform: rotateY(-40deg) scale(0.6) translateX(105%);
     -o-transform: rotateY(-40deg) scale(0.6) translateX(105%);
     -ms-transform:rotateY(-40deg) scale(0.6) translateX(105%);
