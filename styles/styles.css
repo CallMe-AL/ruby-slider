@@ -131,6 +131,8 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+
+    perspective: 1000px;
 }
 
 .slide {
@@ -182,8 +184,8 @@ body {
     display: block;
     z-index: 2;
 
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    /* transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0); */
 }
 
 @keyframes fadeIn {
@@ -207,33 +209,33 @@ body {
   }
 
 .slide.hoverable.left {
-    transform: perspective(70em) rotateY(40deg);
-    -webkit-transform: perspective(70em) rotateY(40deg);
+    transform: rotateY(40deg);
+    /* -webkit-transform: perspective(70em) rotateY(40deg);
     -moz-transform: perspective(70em) rotateY(40deg);
     -o-transform: perspective(70em) rotateY(40deg);
-    -ms-transform: perspective(70em) rotateY(40deg);
+    -ms-transform: perspective(70em) rotateY(40deg); */
 
     transform-style: preserve-3d;
 
 }
 
 .slide.hoverable.right {
-    transform: perspective(70em) rotateY(-40deg);
-    -webkit-transform: perspective(70em) rotateY(-40deg);
+    transform: rotateY(-40deg);
+    /* -webkit-transform: perspective(70em) rotateY(-40deg);
     -moz-transform: perspective(70em) rotateY(-40deg);
     -o-transform: perspective(70em) rotateY(-40deg);
-    -ms-transform: perspective(70em) rotateY(-40deg);
+    -ms-transform: perspective(70em) rotateY(-40deg); */
 
     transform-style: preserve-3d;
 
 }
 
 .prev-slide {
-    transform: perspective(70em) rotateY(40deg) translateX(-105%) ;
-    -webkit-transform: perspective(70em) rotateY(40deg) translateX(-105%);
+    transform: rotateY(40deg) translateX(-105%) ;
+    /* -webkit-transform: perspective(70em) rotateY(40deg) translateX(-105%);
     -moz-transform: perspective(70em) rotateY(40deg) translateX(-105%);
     -o-transform: perspective(70em) rotateY(40deg) translateX(-105%);
-    -ms-transform:perspective(70em) rotateY(40deg) translateX(-105%);
+    -ms-transform:perspective(70em) rotateY(40deg) translateX(-105%); */
     scale: 0.5;
     display: block;
 
@@ -260,11 +262,11 @@ body {
 }
 
 .next-slide {
-    transform: perspective(70em) rotateY(-40deg) translateX(105%);
-    -webkit-transform: perspective(70em) rotateY(-40deg) translateX(105%);
+    transform: rotateY(-40deg) translateX(105%);
+    /* -webkit-transform: perspective(70em) rotateY(-40deg) translateX(105%);
     -moz-transform: perspective(70em) rotateY(-40deg) translateX(105%);
     -o-transform: perspective(70em) rotateY(-40deg) translateX(105%);
-    -ms-transform:perspective(70em) rotateY(-40deg) translateX(105%);
+    -ms-transform:perspective(70em) rotateY(-40deg) translateX(105%); */
     scale: 0.5;
     display: block;
 
