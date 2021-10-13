@@ -196,10 +196,10 @@ body {
     object-fit: cover;
     border-radius: 15px;
 
-    position: relative;
+    /* position: relative; */
 }
 
-.img-text {
+/* .img-text {
     position: absolute;
     bottom: 0;
     left: 10px;
@@ -232,7 +232,7 @@ body {
     -moz-animation: fadeIn 1s;
     -o-animation: fadeIn 1s;
     -ms-animation: fadeIn 1s;
-}
+} */
 
 .btn-left,
 .btn-right {
