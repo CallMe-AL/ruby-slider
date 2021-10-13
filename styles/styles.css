@@ -91,10 +91,7 @@ body {
 .carousel-container {
     width: 230px;
     height: 230px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    
     margin-top: 15px;
 
     position: relative; 
@@ -138,7 +135,7 @@ body {
 }
 
 .prev-slide {
-    -webkit-transform: translateX(-45%) scale(0.75);
+    -webkit-transform: translateX(-45%) scale(0.75) rotateY(40deg);
     /* -moz-transform: translateX(-45%) rotateY(40deg) scale(0.75);
     transform: translateX(-45%) rotateY(40deg) scale(0.75);  */
     display: block;
@@ -251,11 +248,15 @@ body {
 }
 
 .btn-left {
-    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
 }
 
 .btn-right {
-    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
 }
 
 @media screen and (min-width: 400px) {
