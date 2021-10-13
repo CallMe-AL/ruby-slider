@@ -112,18 +112,16 @@ body {
 }
 
 .slide {
-    position: absolute;
     height: 230px;
     width: 230px;
 
     display: none;
-    transition: all 5s linear;
+    transition: all 0.8s linear;
 }
 
 .slide.active {
     display: block;
-    
-    z-index: 2;
+    position: absolute;
     
 }
 
@@ -144,6 +142,9 @@ body {
     -moz-transform: translateX(-45%) rotateY(40deg) scale(0.75);
     transform: translateX(-45%) rotateY(40deg) scale(0.75); 
     display: block;
+    position: absolute;
+    z-index: -1;
+
 }
 
 .prev-slide::after {
@@ -170,6 +171,9 @@ body {
     -moz-transform: translateX(45%) rotateY(-40deg) scale(0.75);
     transform:  translateX(45%) rotateY(-40deg) scale(0.75);
     display: block;
+    position: absolute;
+    z-index: -1;
+
 
 }
 
