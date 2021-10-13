@@ -138,8 +138,8 @@ body {
 }
 
 .prev-slide {
-    /* -webkit-transform: translateX(-45%) rotateY(40deg) scale(0.75);
-    -moz-transform: translateX(-45%) rotateY(40deg) scale(0.75);
+    -webkit-transform: translateX(-45%) scale(0.75);
+    /* -moz-transform: translateX(-45%) rotateY(40deg) scale(0.75);
     transform: translateX(-45%) rotateY(40deg) scale(0.75);  */
     display: block;
     position: absolute;
