@@ -284,9 +284,9 @@ body {
     }
 
     .next-slide {
-        -webkit-transform: translateX(-55%) rotateY(40deg) scale(0.75) translate3d(0,0,0px);
-        -moz-transform: translateX(-55%) rotateY(40deg) scale(0.75) translate3d(0,0,0px);
-        transform: translateX(-55%) rotateY(40deg) scale(0.75) translate3d(0,0,0px);
+        -webkit-transform: translateX(55%) rotateY(-40deg) scale(0.75) translate3d(0,0,0px);
+        -moz-transform: translateX(55%) rotateY(-40deg) scale(0.75) translate3d(0,0,0px);
+        transform: translateX(55%) rotateY(-40deg) scale(0.75) translate3d(0,0,0px);
     }
 
     .prev-slide {
