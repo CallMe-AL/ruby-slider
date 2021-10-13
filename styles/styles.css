@@ -158,11 +158,12 @@ body {
     background-color:rgba(255, 255, 255, 0.507);
     border-radius: 15px;
 
-    animation: fadeIn 1s;    
+        
     -webkit-animation: fadeIn 1s;
     -moz-animation: fadeIn 1s;
     -o-animation: fadeIn 1s;
     -ms-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }
 
 .next-slide {
@@ -183,11 +184,13 @@ body {
     position: absolute;
     background-color:rgba(255, 255, 255, 0.507);
     border-radius: 15px;
-    animation: fadeIn 1s;    
+
+        
     -webkit-animation: fadeIn 1s;
     -moz-animation: fadeIn 1s;
     -o-animation: fadeIn 1s;
     -ms-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }
 
 .slide-img {
@@ -196,10 +199,10 @@ body {
     object-fit: cover;
     border-radius: 15px;
 
-    /* position: relative; */
+    position: relative;
 }
 
-/* .img-text {
+.img-text {
     position: absolute;
     bottom: 0;
     left: 10px;
@@ -227,12 +230,13 @@ body {
 
 .img-text.active-text {
     display: inline;
-    animation: fadeIn 1s;    
+        
     -webkit-animation: fadeIn 1s;
     -moz-animation: fadeIn 1s;
     -o-animation: fadeIn 1s;
     -ms-animation: fadeIn 1s;
-} */
+    animation: fadeIn 1s;
+}
 
 .btn-left,
 .btn-right {
