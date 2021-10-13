@@ -104,6 +104,8 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    -webkit-transform: rotateY(0deg) scale(1) translateX(0) translate3d(0,0,0px);
+    transform: rotateY(0deg) scale(1) translateX(0) translate3d(0,0,0px);
 
     perspective: 1000px;
 }
@@ -119,8 +121,6 @@ body {
 
 .slide.active {
     display: block;
-    -webkit-transform: rotateY(0deg) scale(1) translateX(0) translate3d(0,0,0px);
-    transform: rotateY(0deg) scale(1) translateX(0) translate3d(0,0,0px);
     
     z-index: 2;
     
@@ -143,7 +143,6 @@ body {
     -moz-transform: rotateY(40deg) scale(0.6) translateX(-105%) translate3d(0,0,0px);
     transform: rotateY(40deg) scale(0.6) translateX(-105%) translate3d(0,0,0px); 
     display: block;
-    z-index: 1;
 }
 
 .prev-slide::after {
@@ -169,7 +168,6 @@ body {
     -moz-transform: rotateY(-40deg) scale(0.6) translateX(105%) translate3d(0,0,0px);
     transform:  rotateY(-40deg) scale(0.6)  translateX(105%) translate3d(0,0,0px);
     display: block;
-    z-index: 1;
 
 }
 
@@ -319,7 +317,7 @@ body {
     }
 }
 
-/* keyframes */
+/* --------- keyframes ----------- */
 
 @keyframes fadeIn {
     0% {opacity:0;}
