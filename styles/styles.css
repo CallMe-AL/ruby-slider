@@ -104,7 +104,6 @@ body {
     -webkit-transform: translateX(0) rotateY(0deg) scale(1);
     transform: translateX(0) rotateY(0deg) scale(1);
 
-    perspective: 1000px;
 
 }
 
@@ -114,6 +113,9 @@ body {
 
     display: none;
     transition: all 0.8s linear;
+
+    perspective: 1000px;
+
 }
 
 .slide.active {
@@ -122,26 +124,29 @@ body {
     
 }
 
-.slide.hoverable.left {
+.slide.hoverable.left .slide-img{
     -webkit-transform: rotateY(40deg);
     -moz-transform: rotateY(40deg);
     transform: rotateY(40deg);
 }
 
-.slide.hoverable.right {
+.slide.hoverable.right .slide-img{
     -webkit-transform: rotateY(-40deg);
     -moz-transform: rotateY(-40deg);
     transform: rotateY(-40deg);
 }
 
 .prev-slide {
-    -webkit-transform: translateZ(-1px) translateX(-45%) scale(0.75)rotateY(35deg) ;
-    /* -moz-transform: translateX(-45%) rotateY(40deg) scale(0.75);
-    transform: translateX(-45%) rotateY(40deg) scale(0.75);  */
+    
     display: block;
     position: absolute;
     z-index: -1;
+}
 
+.prev-slide .slide-img {
+    -webkit-transform: translateX(-45%) scale(0.75)rotateY(35deg) ;
+    /* -moz-transform: translateX(-45%) rotateY(40deg) scale(0.75);
+    transform: translateX(-45%) rotateY(40deg) scale(0.75);  */
 }
 
 .prev-slide::after {
