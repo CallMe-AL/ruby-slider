@@ -135,7 +135,7 @@ body {
 }
 
 .prev-slide {
-    -webkit-transform: translateZ(-1px) translateX(-50%) scale(0.75);
+    -webkit-transform: translateZ(-1px) translateX(-45%) scale(0.75)rotateY(35deg) ;
     /* -moz-transform: translateX(-45%) rotateY(40deg) scale(0.75);
     transform: translateX(-45%) rotateY(40deg) scale(0.75);  */
     display: block;
