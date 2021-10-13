@@ -117,7 +117,7 @@ body {
     width: 230px;
 
     display: none;
-    transition: all 0.8s linear;
+    transition: all 5s linear;
 }
 
 .slide.active {
