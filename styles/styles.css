@@ -103,7 +103,7 @@ body {
     position: relative;
     -webkit-transform: translateX(0) rotateY(0deg) scale(1);
     transform: translateX(0) rotateY(0deg) scale(1);
-    z-index: 0;
+    
     perspective: 1000px;
 
 }
@@ -135,7 +135,7 @@ body {
 }
 
 .prev-slide {
-    -webkit-transform:rotateY(35deg) translateX(-50%) scale(0.75) ;
+    -webkit-transform: translateZ(-1px) rotateY(35deg) translateX(-50%) scale(0.75) ;
     /* -moz-transform: translateX(-45%) rotateY(40deg) scale(0.75);
     transform: translateX(-45%) rotateY(40deg) scale(0.75);  */
     display: block;
