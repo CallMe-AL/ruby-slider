@@ -191,8 +191,8 @@ body {
 
 .prev-slide {    
     display: block;
-    /* -webkit-transform: translateZ(100px);
-    transform: translateZ(100px); */
+    -webkit-transform: translateZ(1px);
+    transform: translateZ(1px);
 }
 
 .prev-slide .slide-img{
@@ -221,8 +221,8 @@ body {
 
 .next-slide {
     display: block;
-    /* -webkit-transform: translateZ(100px);
-    transform: translateZ(100px); */
+    -webkit-transform: translateZ(1px);
+    transform: translateZ(1px);
 }
 
 .next-slide .slide-img {
