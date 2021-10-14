@@ -1,32 +1,32 @@
 let rubies = [
     {
         id: 1,
-        img: ".images/ruby1.jpg",
+        img: "images/ruby1.jpg",
         desc: "Ruby and her toys",
     },
     {
         id: 2,
-        img: ".images/ruby2.jpg",
+        img: "images/ruby2.jpg",
         desc: "Snoozin'",
     },
     {
         id: 3,
-        img: ".images/ruby3.jpg",
+        img: "images/ruby3.jpg",
         desc: "Beggin'",
     },
     {
         id: 4,
-        img: ".images/ruby4.jpg",
+        img: "images/ruby4.jpg",
         desc: "Smilin'",
     },
     {
         id: 5,
-        img: ".images/ruby5.jpg",
+        img: "images/ruby5.jpg",
         desc: "Ruby in the lilacs",
     },
     {
         id: 6,
-        img: ".images/ruby6.jpg",
+        img: "images/ruby6.jpg",
         desc: "Ruby stoically in the car",
     },
 ]
