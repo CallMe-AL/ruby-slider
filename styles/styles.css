@@ -170,8 +170,8 @@ body {
 }
 
 .active .slide-img {
-    -webkit-transform: translateX(0%) rotateY(0deg) scale(1);
-    transform:  translateX(0%) rotateY(0deg) scale(1);
+    -webkit-transform: translateX(0%) rotateY(0deg) scale(1) translateZ(200px);
+    transform:  translateX(0%) rotateY(0deg) scale(1) translateZ(200px);
 }
 
 .hoverable.left .slide-img{
@@ -191,9 +191,9 @@ body {
 }
 
 .prev-slide .slide-img{
-    -webkit-transform: translateX(-45%) scale(0.75) rotateY(40deg);
-    -moz-transform: translateX(-45%) scale(0.75) rotateY(40deg);
-    transform: translateX(-45%) scale(0.75) rotateY(40deg); 
+    -webkit-transform: translateX(-45%) scale(0.75) rotateY(40deg) translateZ(100px);
+    -moz-transform: translateX(-45%) scale(0.75) rotateY(40deg) translateZ(100px);
+    transform: translateX(-45%) scale(0.75) rotateY(40deg) translateZ(100px); 
 }
 
 .prev-slide .slide-img::after {
@@ -219,9 +219,9 @@ body {
 }
 
 .next-slide .slide-img {
-    -webkit-transform: translateX(45%)scale(0.75) rotateY(-40deg);
-    -moz-transform: translateX(45%)  scale(0.75) rotateY(-40deg);
-    transform:  translateX(45%) scale(0.75) rotateY(-40deg) ;
+    -webkit-transform: translateX(45%)scale(0.75) rotateY(-40deg) translateZ(100px);
+    -moz-transform: translateX(45%)  scale(0.75) rotateY(-40deg) translateZ(100px);
+    transform:  translateX(45%) scale(0.75) rotateY(-40deg) translateZ(100px);
 }
 
 .next-slide .slide-img::after {
