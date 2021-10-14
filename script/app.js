@@ -73,7 +73,6 @@ function setUpCarousel() {
     });
 
     slides[0].classList.add('active');
-    slides[0].classList.add('hoverable');
     imgTexts[0].classList.add('active-text');
 
     slides[1].classList.add('next-slide');
@@ -81,7 +80,7 @@ function setUpCarousel() {
 
     const activeSlide = document.querySelector('.active');
     hoverSlide(activeSlide);
-
+    setHover(slides[slideIndex]);
 }
 
 
@@ -172,11 +171,8 @@ const carousel = document.querySelector('.carousel');
 function hoverSlide(slide) {
     slide.addEventListener('mousemove', function(e) {
         const carContLeft = carouselContainer.offsetLeft;
-        const carLeft = carousel.offsetLeft;
-    
-        const distanceLeft = carLeft + carContLeft;
         
-        if ((e.pageX - distanceLeft) < slide.getBoundingClientRect().width / 2) {
+        if ((e.pageX - carContLeft) < slide.getBoundingClientRect().width / 2) {
             if (slide.classList.contains('active') && slide.classList.contains('right')) {
                 slide.classList.remove('right');
             };
