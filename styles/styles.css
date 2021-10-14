@@ -107,6 +107,9 @@ body {
     cursor: pointer;
     color: black;
     z-index: 2;
+
+    -webkit-transform: translateZ(200px);
+    transform: translateZ(200px);
 }
 
 .btn-left {
