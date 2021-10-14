@@ -1,110 +1,90 @@
 let rubies = [
     {
         id: 1,
-        img: ".images/ruby1.jpg",
-        desc: "Ruby and her toys",
+        img: "./images/ruby1.jpg",
     },
     {
         id: 2,
-        img: ".images/ruby2.jpg",
-        desc: "Snoozin'",
+        img: "./images/ruby2.jpg",
     },
     {
         id: 3,
-        img: ".images/ruby3.jpg",
-        desc: "Beggin'",
+        img: "./images/ruby3.jpg",
     },
     {
         id: 4,
-        img: ".images/ruby4.jpg",
-        desc: "Smilin'",
+        img: "./images/ruby4.jpg",
     },
     {
         id: 5,
-        img: ".images/ruby5.jpg",
-        desc: "Ruby in the lilacs",
+        img: "./images/ruby5.jpg",
     },
     {
         id: 6,
-        img: ".images/ruby6.jpg",
-        desc: "Ruby stoically in the car",
+        img: "./images/ruby6.jpg",
     },
 ]
 
-let slideIndex = 0;
-
-window.addEventListener('DOMContentLoaded', function() {
-    displayCarousel(rubies);    
-    setUpCarousel();
-});
-
-const container = document.querySelector('.track-container');
+let slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.btn-left');
 const nextBtn = document.querySelector('.btn-right');
+const container = document.querySelector('.track-container');
+const imgText = document.querySelectorAll('.img-text');
+
+// container.insertBefore(slides[slides.length - 1], slides[0]);
+
+// // carousel functionality
+// prevBtn.addEventListener('click', function() { 
+//     slides = document.querySelectorAll('.slide');
+//     const activeSlide = document.querySelector('.active');
+//     const prevSlide = activeSlide.previousElementSibling;
+
+//     container.insertBefore(slides[slides.length - 1], slides[0]);
+
+//     activeSlide.classList.remove('active');
+//     prevSlide.classList.add('active');
+// });
+
+// nextBtn.addEventListener('click', function() {  
+//     slides = document.querySelectorAll('.slide');
+//     const activeSlide = document.querySelector('.active');
+//     const nextSlide = activeSlide.nextElementSibling;
+
+//     container.appendChild(slides[0]);
+
+//     activeSlide.classList.remove('active');
+//     nextSlide.classList.add('active');
+// });
+
+let slideIndex = 0;
+container.insertBefore(slides[slides.length - 1], slides[0]);
+hoverSlide(slides[slideIndex]);
+slides[slideIndex].style.backgroundImage = `url(${rubies[slideIndex].img})`;
 
 let transitionTime;
 let hoverEffect = true;
 
-function displayCarousel(rubyArray) {
-
-    let newArray = rubyArray.map(function(item) {
-        return `<div class="slide">
-        <div class="slide-img"></div>
-        <p class="img-text"></p>
-    </div>`;
-    });
-
-    newArray = newArray.join('');
-
-    container.innerHTML = newArray;
-}
-
-function setUpCarousel() {
-    const images = document.querySelectorAll('.slide-img');
-    const slides = document.querySelectorAll('.slide');
-    const imgTexts = document.querySelectorAll('.img-text');
-
-    images.forEach(function(div, index) {
-        div.style.backgroundImage = `url(${rubies[index].img})`;
-    });
-
-    imgTexts.forEach(function(img, index) {
-        img.textContent = `${rubies[index].desc}`;
-    });
-
-    slides[0].classList.add('active');
-    slides[0].classList.add('hoverable');
-    imgTexts[0].classList.add('active-text');
-
-    slides[1].classList.add('next-slide');
-    slides[rubies.length - 1].classList.add('prev-slide');
-
-    const activeSlide = document.querySelector('.active');
-    hoverSlide(activeSlide);
-
-}
-
-
 prevBtn.addEventListener('click', function() {
     slideIndex--;
     if (slideIndex < 0) {
-        slideIndex = rubies.length - 1;
+        slideIndex = slides.length - 1;
     }
     showSlide(slideIndex);
+    clearTimeout(transitionTime);
+    setHover();
 });
 
 nextBtn.addEventListener('click', function() {
     slideIndex++;
-    if (slideIndex > rubies.length - 1) {
+    if (slideIndex > slides.length - 1) {
         slideIndex = 0;
     }
     showSlide(slideIndex);
+    clearTimeout(transitionTime);
+    setHover();
 });
 
 function showSlide(slideIndex) {
-    const slides = document.querySelectorAll('.slide');
-    const imgText = document.querySelectorAll('.img-text');
-
     slides.forEach(function(slide) {
         if (slide.classList.contains('active')) {
             slide.classList.remove('active');
@@ -122,47 +102,47 @@ function showSlide(slideIndex) {
 
     imgText[slideIndex].classList.add('active-text');
     slides[slideIndex].classList.add('active');
+    slides[slideIndex].style.backgroundImage = `url(${rubies[slideIndex].img})`;
    
-    nextSlide(slideIndex, slides);
-    prevSlide(slideIndex, slides);
-
-    clearTimeout(transitionTime);
-    setHover(slides[slideIndex]);
+    nextSlide(slideIndex);
+    prevSlide(slideIndex);
 }
 
-function setHover(activeSlide) {
+function setHover() {
     transitionTime = setTimeout(function(){
-        if (activeSlide.classList.contains('active')) {
+        if (slides[slideIndex].classList.contains('active')) {
             // checks boolean of hover state 
             // if user allows hovering, adds the class
             // removes in case button is turned to off
             if (hoverEffect == true) {
-                activeSlide.classList.add('hoverable');
+                slides[slideIndex].classList.add('hoverable');
             } else {
-                activeSlide.classList.remove('hoverable');
+                slides[slideIndex].classList.remove('hoverable');
             }
             
-            hoverSlide(activeSlide);
+            hoverSlide(slides[slideIndex]);
         }        
     }, 800);
 }
 
-function nextSlide(index, slideArray) {
+function nextSlide(index) {
     index++;
-    if (index > rubies.length - 1) {
+    if (index > slides.length - 1) {
         index = 0;
     }
 
-    slideArray[index].classList.add('next-slide');
+    slides[index].classList.add('next-slide');
+    slides[index].style.backgroundImage = `url(${rubies[index].img})`;
 }
 
-function prevSlide(index, slideArray) {
+function prevSlide(index) {
     index--;
     if (index < 0) {
-        index = rubies.length - 1;
+        index = slides.length - 1;
     }
 
-    slideArray[index].classList.add('prev-slide');
+    slides[index].classList.add('prev-slide');
+    slides[index].style.backgroundImage = `url(${rubies[index].img})`;
 }
 
 // hover functionality
@@ -202,21 +182,22 @@ const hoverBtn = document.querySelector('.hover-btn');
 const onOff = document.querySelector('.on-off'); // lets user know boolean state
 
 hoverBtn.addEventListener('click', function() {
-    const activeSlide = document.querySelector('.active');
+
     // checks if hover boolean is set to true
     if (hoverEffect == true) {
         hoverEffect = false;
         // if the current slide already has the hoverable class, removes it
-        if (activeSlide.classList.contains('hoverable')) {
-            activeSlide.classList.remove('hoverable')
+        if (slides[slideIndex].classList.contains('hoverable')) {
+            slides[slideIndex].classList.remove('hoverable')
         }
         onOff.textContent = 'off';
     } else {
         hoverEffect = true;
         // if the current slide had the hoverable class removed, adds it again
-        if (!activeSlide.classList.contains('hoverable')) {
-            activeSlide.classList.add('hoverable')
+        if (!slides[slideIndex].classList.contains('hoverable')) {
+            slides[slideIndex].classList.add('hoverable')
         }
         onOff.textContent = 'on';
     }
 });
+
