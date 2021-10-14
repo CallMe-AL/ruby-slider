@@ -43,7 +43,7 @@ const prevBtn = document.querySelector('.btn-left');
 const nextBtn = document.querySelector('.btn-right');
 
 let transitionTime;
-let hoverEffect = true;
+let hoverEffect = false;
 
 function displayCarousel(rubyArray) {
 
@@ -187,15 +187,6 @@ function hoverSlide(slide) {
                 slide.classList.remove('left');
             };
             slide.classList.add('right');
-        }
-    });
-
-    // extra mobile support for tapping outside slide
-    slide.addEventListener('mouseout', function() {
-        if (slide.classList.contains('active') && slide.classList.contains('left')) {
-            slide.classList.remove('left');
-        } else if (slide.classList.contains('active') && slide.classList.contains('right')) {
-            slide.classList.remove('left');
         }
     });
     
