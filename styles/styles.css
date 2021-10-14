@@ -23,8 +23,6 @@ body {
 
     width: 350px;
     padding: 10px;
-
-    position: relative;
 }
 
 .header-section {
@@ -158,7 +156,12 @@ body {
     background-position: center;
     border-radius: 15px;
 
-    transition: all 0.8s linear;
+    transition: all 0.8s ease;
+    /* -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+    animation: fadeIn 1s; */
     position: relative;
 
 }
