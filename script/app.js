@@ -189,6 +189,15 @@ function hoverSlide(slide) {
             slide.classList.add('right');
         }
     });
+
+    // extra mobile support for tapping outside slide
+    slide.addEventListener('mouseout', function() {
+        if (slide.classList.contains('active') && slide.classList.contains('left')) {
+            slide.classList.remove('left');
+        } else if (slide.classList.contains('active') && slide.classList.contains('right')) {
+            slide.classList.remove('left');
+        }
+    });
     
     slide.addEventListener('mouseout', function() {
         slide.classList.remove('left');
