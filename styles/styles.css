@@ -106,10 +106,11 @@ body {
     background: transparent;
     position: absolute;
     cursor: pointer;
-    color: black;
+    color: lightskyblue;
+
     z-index: 2;
 
-    bottom: -63px;
+    bottom: -68px;
 }
 
 .btn-left {
@@ -123,6 +124,11 @@ body {
     right: 0px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);    
+}
+
+.fas {
+    padding: 5px;
+    text-shadow: 0px 0px 5px black;
 }
 
 /* ----- carousel track ----- */
@@ -167,13 +173,19 @@ body {
 
 .slide.active {
     display: block;
+
     z-index: 2;
 
+    /* fix to maintain z-index on iphones */
+    /* MUST be placed on slides (perspective is on slides!!) */
+    /* 200px is arbitrary -- so long as it's above next/prev slides */
     -webkit-transform: translateZ(200px);
     transform: translateZ(200px);
 }
 
 .active .slide-img {
+    box-shadow: 0 0 10px black;
+
     -webkit-transform: translateX(0%) rotateY(0deg) scale(1);
     transform:  translateX(0%) rotateY(0deg) scale(1);
 }
@@ -192,6 +204,8 @@ body {
 
 .prev-slide {    
     display: block;
+
+    /* fix to maintain z-index on iphones */
     -webkit-transform: translateZ(1px);
     transform: translateZ(1px);
 }
@@ -222,6 +236,8 @@ body {
 
 .next-slide {
     display: block;
+
+    /* fix to maintain z-index on iphones */
     -webkit-transform: translateZ(1px);
     transform: translateZ(1px);
 }
@@ -359,15 +375,20 @@ body {
         transform: none;
     }
 
-    .btn-left {
+    .btn-left,
+    .btn-right {
         top: 50%;
-        left: -30px;
+        font-size: 3rem;
+    }
+
+    .btn-left {
+        left: -45px;
     }
 
     .btn-right {
-        top: 50%;
-        right: -30px;
+        right: -45px;
     }
+
 }
 
 @media screen and (min-width: 740px) {
