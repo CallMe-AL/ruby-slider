@@ -17,9 +17,15 @@
     <div class="carousel">
         <h1 class="header">A slider for Ruby</h1>
         <button class="hover-btn" type="button">Toggle hover effect</button>
-        <p class="toggle-text">Hover is: <span class="on-off">on</span></p>
+        <p class="toggle-text">Hover is: <span class="on-off">off</span></p>
         <div class="carousel-container">
-            <div class="track-container">
+            <button type="button" class="btn-left">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button type="button" class="btn-right">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="track-container">                
                 <!-- <div class="slide active-slide">
                     <div class="slide-img active hoverable "></div>
                     <p class="img-text active-text">Ruby and her toy</p>
@@ -31,15 +37,7 @@
                     <div class="slide-img next-slide"></div>
                 </div>            -->
             </div>
-            <button type="button" class="btn-left">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button type="button" class="btn-right">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-
         </div>
-
     </div>
 
     <script src="script/app.js"></script>
