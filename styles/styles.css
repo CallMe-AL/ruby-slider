@@ -253,7 +253,7 @@ body {
 
 .btn-left {
     top: 50%;
-    left: -30px;
+    left: 0px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     
@@ -261,7 +261,7 @@ body {
 
 .btn-right {
     top: 50%;
-    right: -30px;
+    right: 0px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);    
 }
