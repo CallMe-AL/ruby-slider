@@ -23,6 +23,7 @@ body {
 
     width: 350px;
     padding: 10px;
+    padding-bottom: 50px;
 }
 
 .header-section {
@@ -107,19 +108,19 @@ body {
     cursor: pointer;
     color: black;
     z-index: 2;
+
+    bottom: -63px;
 }
 
 .btn-left {
-    top: 50%;
-    left: -30px;
+    left: 0px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     
 }
 
 .btn-right {
-    top: 50%;
-    right: -30px;
+    right: 0px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);    
 }
@@ -254,8 +255,8 @@ body {
 
 .img-text {
     position: absolute;
-    bottom: 0;
-    left: 10px;
+    bottom: -50px;
+    left: 50%;
     color: white;
     display: none;
     padding: 5px;
@@ -264,10 +265,9 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 1px;
-
+    transform: translateX(-50%);
+    white-space: nowrap;
     z-index: 2;
-    /* -webkit-transform: translateZ(200px);
-    transform: translateZ(200px); */
 }
 
 .img-text::after {
@@ -277,7 +277,8 @@ body {
     width: 50px;
     background: rgba(0,0,0,0.8);
     bottom: -5px;
-    left: 5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .active-text {
@@ -335,6 +336,7 @@ body {
 
     .carousel {
         min-width: 600px;
+        padding-bottom: 10px;
     }
 
     .slide {
@@ -345,12 +347,26 @@ body {
     .img-text {
         font-size: 1.4rem;
         padding: 10px;
+        bottom: 0;
+        left: 10px;
+        transform: none;
     }
 
     .img-text::after {
         height: 5px;
         left: 10px;
         bottom: -8px;
+        transform: none;
+    }
+
+    .btn-left {
+        top: 50%;
+        left: -30px;
+    }
+
+    .btn-left {
+        top: 50%;
+        right: -30px;
     }
 }
 
