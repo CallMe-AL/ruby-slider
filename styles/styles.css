@@ -89,7 +89,7 @@ body {
 .carousel-container {
     width: 230px;
     height: 230px;
-    
+
     margin-top: 15px;
 
     position: relative; 
@@ -107,9 +107,6 @@ body {
     cursor: pointer;
     color: black;
     z-index: 2;
-
-    -webkit-transform: translateZ(200px);
-    transform: translateZ(200px);
 }
 
 .btn-left {
@@ -194,8 +191,8 @@ body {
 
 .prev-slide {    
     display: block;
-    -webkit-transform: translateZ(100px);
-    transform: translateZ(100px);
+    /* -webkit-transform: translateZ(100px);
+    transform: translateZ(100px); */
 }
 
 .prev-slide .slide-img{
@@ -224,8 +221,8 @@ body {
 
 .next-slide {
     display: block;
-    -webkit-transform: translateZ(100px);
-    transform: translateZ(100px);
+    /* -webkit-transform: translateZ(100px);
+    transform: translateZ(100px); */
 }
 
 .next-slide .slide-img {
@@ -253,6 +250,8 @@ body {
     animation: fadeIn 1s;
 }
 
+/* --------- img text ----------- */
+
 .img-text {
     position: absolute;
     bottom: 0;
@@ -267,6 +266,8 @@ body {
     letter-spacing: 1px;
 
     z-index: 2;
+    /* -webkit-transform: translateZ(200px);
+    transform: translateZ(200px); */
 }
 
 .img-text::after {
