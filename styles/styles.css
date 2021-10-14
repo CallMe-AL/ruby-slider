@@ -167,11 +167,14 @@ body {
 .slide.active {
     display: block;
     z-index: 2;
+
+    -webkit-transform: translateZ(200px);
+    transform: translateZ(200px);
 }
 
 .active .slide-img {
-    -webkit-transform: translateX(0%) rotateY(0deg) scale(1) translateZ(200px);
-    transform:  translateX(0%) rotateY(0deg) scale(1) translateZ(200px);
+    -webkit-transform: translateX(0%) rotateY(0deg) scale(1);
+    transform:  translateX(0%) rotateY(0deg) scale(1);
 }
 
 .hoverable.left .slide-img{
@@ -188,12 +191,14 @@ body {
 
 .prev-slide {    
     display: block;
+    -webkit-transform: translateZ(100px);
+    transform: translateZ(100px);
 }
 
 .prev-slide .slide-img{
-    -webkit-transform: translateX(-45%) scale(0.75) rotateY(40deg) translateZ(100px);
-    -moz-transform: translateX(-45%) scale(0.75) rotateY(40deg) translateZ(100px);
-    transform: translateX(-45%) scale(0.75) rotateY(40deg) translateZ(100px); 
+    -webkit-transform: translateX(-45%) scale(0.75) rotateY(40deg);
+    -moz-transform: translateX(-45%) scale(0.75) rotateY(40deg);
+    transform: translateX(-45%) scale(0.75) rotateY(40deg); 
 }
 
 .prev-slide .slide-img::after {
@@ -216,12 +221,14 @@ body {
 
 .next-slide {
     display: block;
+    -webkit-transform: translateZ(100px);
+    transform: translateZ(100px);
 }
 
 .next-slide .slide-img {
-    -webkit-transform: translateX(45%)scale(0.75) rotateY(-40deg) translateZ(100px);
-    -moz-transform: translateX(45%)  scale(0.75) rotateY(-40deg) translateZ(100px);
-    transform:  translateX(45%) scale(0.75) rotateY(-40deg) translateZ(100px);
+    -webkit-transform: translateX(45%)scale(0.75) rotateY(-40deg);
+    -moz-transform: translateX(45%)  scale(0.75) rotateY(-40deg);
+    transform:  translateX(45%) scale(0.75) rotateY(-40deg) ;
 }
 
 .next-slide .slide-img::after {
