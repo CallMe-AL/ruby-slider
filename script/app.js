@@ -45,12 +45,16 @@ const nextBtn = document.querySelector('.btn-right');
 let transitionTime;
 let hoverEffect = false;
 
+// function for growSlide function
+const toggleGrow = function(e) {
+    e.target.classList.toggle('grow');
+}
+
 function displayCarousel(rubyArray) {
 
     let newArray = rubyArray.map(function(item) {
         return `<div class="slide">
         <div class="slide-img"></div>
-        <p class="img-text"></p>
     </div>`;
     });
 
@@ -62,23 +66,21 @@ function displayCarousel(rubyArray) {
 function setUpCarousel() {
     const images = document.querySelectorAll('.slide-img');
     const slides = document.querySelectorAll('.slide');
-    const imgTexts = document.querySelectorAll('.img-text');
+    const imgText = document.querySelector('.img-text');
 
     images.forEach(function(div, index) {
         div.style.backgroundImage = `url(${rubies[index].img})`;
     });
 
-    imgTexts.forEach(function(img, index) {
-        img.textContent = `${rubies[index].desc}`;
-    });
-
     slides[0].classList.add('active');
-    imgTexts[0].classList.add('active-text');
+
+    imgText.textContent = `${rubies[slideIndex].desc}`;
 
     slides[1].classList.add('next-slide');
     slides[rubies.length - 1].classList.add('prev-slide');
 
     const activeSlide = document.querySelector('.active');
+    growSlide(images);
     hoverSlide(activeSlide);
     setHover(slides[slideIndex]);
 }
@@ -102,7 +104,8 @@ nextBtn.addEventListener('click', function() {
 
 function showSlide(slideIndex) {
     const slides = document.querySelectorAll('.slide');
-    const imgText = document.querySelectorAll('.img-text');
+    const imgText = document.querySelector('.img-text');
+    const images = document.querySelectorAll('.slide-img');
 
     slides.forEach(function(slide) {
         if (slide.classList.contains('active')) {
@@ -116,17 +119,28 @@ function showSlide(slideIndex) {
 
     });
 
-    const activeText = document.querySelector('.active-text');
-    activeText.classList.remove('active-text');
+    imgText.textContent = `${rubies[slideIndex].desc}`;
 
-    imgText[slideIndex].classList.add('active-text');
     slides[slideIndex].classList.add('active');
+    growSlide(images);
    
     nextSlide(slideIndex, slides);
     prevSlide(slideIndex, slides);
 
+    // waits until transition finishes before allowing hover ability
     clearTimeout(transitionTime);
     setHover(slides[slideIndex]);
+}
+
+
+function growSlide(imgs) {
+    imgs.forEach(function(img, index) {
+        img.classList.remove('grow');
+        img.removeEventListener('click', toggleGrow);
+        if (index == slideIndex) {
+            img.addEventListener('click', toggleGrow);
+        }
+    });
 }
 
 function setHover(activeSlide) {
@@ -146,6 +160,7 @@ function setHover(activeSlide) {
     }, 800);
 }
 
+// for showSlide function
 function nextSlide(index, slideArray) {
     index++;
     if (index > rubies.length - 1) {
@@ -155,6 +170,7 @@ function nextSlide(index, slideArray) {
     slideArray[index].classList.add('next-slide');
 }
 
+// for showSlide function
 function prevSlide(index, slideArray) {
     index--;
     if (index < 0) {
@@ -164,7 +180,7 @@ function prevSlide(index, slideArray) {
     slideArray[index].classList.add('prev-slide');
 }
 
-// hover functionality
+// ***** hover functionality *****
 const carouselContainer = document.querySelector('.carousel-container');
 const carousel = document.querySelector('.carousel');
 
@@ -193,7 +209,7 @@ function hoverSlide(slide) {
 
 }
 
-// hover btn functionality
+// ***** hover btn functionality *****
 const hoverBtn = document.querySelector('.hover-btn');
 const onOff = document.querySelector('.on-off'); // lets user know boolean state
 
