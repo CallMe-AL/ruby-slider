@@ -27,7 +27,7 @@ let rubies = [
     {
         id: 6,
         img: "./images/ruby6.JPG",
-        desc: "Ruby stoically in the car",
+        desc: "Ruby stoically in a car",
     },
 ]
 
