@@ -109,7 +109,7 @@ body {
 
     z-index: 2;
 
-    bottom: -68px;
+    bottom: -70px;
 }
 
 .btn-left {
@@ -279,13 +279,14 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 1px;
-    display: inline-block;
+    display: block;
     font-weight: 700;
     margin-top: 10px;
     position: relative;
 
     text-align: center;
-    max-width: 75%;
+    max-width: 55%;
+
 
     box-shadow: inset 0 0 10px lightskyblue;
 }
@@ -298,6 +299,7 @@ body {
     background: lightskyblue;
     bottom: -10px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
