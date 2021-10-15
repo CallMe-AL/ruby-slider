@@ -348,14 +348,6 @@ body {
         min-width: 600px;
     }
 
-    .hover-btn {
-        display: block;
-    }
-
-    .toggle-text {
-        display: inline-block;
-    }
-
     .slide {
         width: 350px;
         height: 350px;
@@ -370,19 +362,7 @@ body {
         height: 5px;
     }
 
-    .btn-left,
-    .btn-right {
-        top: 50%;
-        font-size: 3rem;
-    }
-
-    .btn-left {
-        left: -45px;
-    }
-
-    .btn-right {
-        right: -45px;
-    } 
+     
 
 }
 
@@ -395,6 +375,28 @@ body {
     .slide {
         width: 400px;
         height: 400px;
+    }
+
+    .hover-btn {
+        display: block;
+    }
+
+    .toggle-text {
+        display: inline-block;
+    }
+
+    .btn-left,
+    .btn-right {
+        top: 50%;
+        font-size: 3rem;
+    }
+
+    .btn-left {
+        left: -45px;
+    }
+
+    .btn-right {
+        right: -45px;
     }
 }
 
